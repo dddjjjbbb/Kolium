@@ -16,17 +16,46 @@ python -c "import nltk; nltk.download('wordnet')"
 
 ## Usage
 
+### Search your Kobo directly
+
+Plug in your Kobo and search by book title or author:
+
+```bash
+kolium shadowbahn
+kolium erickson
+kolium "burnout society"
+```
+
+Kolium searches the KOReader clipboard directory on your mounted Kobo, matching against filenames, titles, and authors. If there's one match it processes immediately. Multiple matches get a numbered selection prompt. No matches lists all available books so you can spot the right title.
+
+Output lands in the current directory as `YYYY-MM-DD-Title-Highlights.md`.
+
+### List all books
+
+See everything on your Kobo:
+
+```bash
+kolium --list
+```
+
+### Process a file directly
+
+If you already have the highlight file:
+
 ```bash
 kolium highlights.md
 ```
 
-That's it. Output lands next to your input as `Highlights_<title>.md`.
+Output lands next to your input as `Highlights_<title>.md`.
 
 If your input has KOReader's date prefix (e.g. `2026-02-15-15-16-56-Tidy First_.md`), it gets stripped automatically.
 
-Want a custom output path? Use `-o`:
+### Custom output path
+
+Use `-o` with either mode:
 
 ```bash
+kolium shadowbahn -o my-notes.md
 kolium highlights.md -o my-notes.md
 ```
 
