@@ -27,3 +27,27 @@ def is_common_phrase(phrase: str) -> bool:
         len(wn.synsets(word)) >= MIN_SYNSETS
         for word in phrase.lower().split()
     )
+
+
+def has_unknown_words(phrase: str) -> bool:
+    """True if all words are lowercase AND have no WordNet entry.
+
+    Filters foreign phrases like "Leck mich" where lowercase words
+    have no English meaning. Capitalized proper names pass even if
+    unknown (e.g., "Larry Goodell").
+    """
+    words = phrase.split()
+    if not words:
+        return False
+
+    # Check if all words are lowercase (likely not a proper name)
+    all_lowercase = all(w.islower() for w in words if w.isalpha())
+    if not all_lowercase:
+        return False
+
+    # Check if all lowercase words have no synsets
+    return all(
+        len(wn.synsets(word)) == 0
+        for word in words
+        if word.islower() and word.isalpha()
+    )

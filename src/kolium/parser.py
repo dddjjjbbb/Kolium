@@ -23,8 +23,9 @@ def extract_people(text: str, nlp: spacy.language.Language) -> list[str]:
     """Extract person names from highlight contents via spaCy NER.
 
     Filters out false positives using heuristics: entities must be
-    at least two words, common phrases are rejected, and possessive
-    forms are excluded.
+    at least two words, common phrases are rejected, possessive
+    forms are excluded, and entities from highlights containing
+    sentence punctuation are excluded (likely quotes).
     """
     from kolium.dictionary import is_common_phrase
 
@@ -32,6 +33,11 @@ def extract_people(text: str, nlp: spacy.language.Language) -> list[str]:
     for content in _highlight_contents(text):
         if len(content.split()) < 2:
             continue
+
+        # Skip highlights with exclamatory/interrogative punctuation (quotes/dialogue)
+        if any(p in content for p in ["!", "?"]):
+            continue
+
         doc = nlp(content)
         for ent in doc.ents:
             name = ent.text.strip()
@@ -40,6 +46,7 @@ def extract_people(text: str, nlp: spacy.language.Language) -> list[str]:
                 and len(name.split()) >= 2
                 and not is_common_phrase(name)
                 and not name.endswith("'s")
+                and "'s " not in name
             ):
                 people.add(name)
     return sorted(people)

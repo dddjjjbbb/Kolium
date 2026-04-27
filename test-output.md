@@ -16,16 +16,13 @@
 - Emanuel Swedenborg
 - Ernest Solvay
 - Erwin Rudolf Josef
-- Friss Scheiße
 - Fritz Haber
 - Heinrich Böll
 - Hermann Göring
-- Ian Kershaw
 - Johann Conrad Dippel
 - Johann Jacob Diesbach
 - Johanna Grothendieck
 - Karl Schwarzschild
-- Leck mich
 - Louis de Broglie
 - Marianne von Willemer
 - Marie Curie
@@ -122,7 +119,7 @@
 - Heisenberg and Bohr presented their vision of quantum mechanics, which would come to be known as the Copenhagen Interpretation.
 - Like the moon in Buddhism, a particle does not exist: it is the act of measuring that makes it a real object.
 - The being of atoms and their elementary particles was not like that of the objects of everyday experience. They live in worlds of potentialities, Heisenberg explained; they are not things, but possibilities.
-- Every morning at breakfast—mirroring the official debates—Einstein would proffer his riddles, and every night Bohr would arrive with a solution. The duel between the two men dominated the conference, and divided the physicists into two opposing camps, but, in the end, Einstein had to yield. He had not found a single inconsistency in Bohr’s reasoning. He accepted defeat grudgingly, and condensed all his hatred of quantum mechanics in a phrase he would repeat time and again in the succeeding years, one he practically spat in the Dane’s face before his departure: “God does not play dice with the universe!”
+- ”Every morning at breakfast—mirroring the official debates—Einstein would proffer his riddles, and every night Bohr would arrive with a solution. The duel between the two men dominated the conference, and divided the physicists into two opposing camps, but, in the end, Einstein had to yield. He had not found a single inconsistency in Bohr’s reasoning. He accepted defeat grudgingly, and condensed all his hatred of quantum mechanics in a phrase he would repeat time and again in the succeeding years, one he practically spat in the Dane’s face before his departure: “God does not play dice with the universe!”
 - Einstein became the greatest enemy of quantum mechanics.
 - Schrödinger’s cat, like any elementary particle, was alive and dead (at least until it was measured), and the Austrian’s name would remain associated forever with this failed attempt to negate the ideas he himself had helped give rise to.
 - Heisenberg was made a professor at the University of Leipzig at twenty-five—the youngest professor in the history of Germany.
@@ -231,7 +228,7 @@
 - Votive
     - Definition: Dedicated in fulfillment of a vow
 - Ypres
-    - Definition: Battle in World War I (1914); heavy but indecisive fighting as the allies and the germans both tried to break through the lines of the others
+    - Definition: Battle in world war i (1914); heavy but indecisive fighting as the allies and the germans both tried to break through the lines of the others
 - Zeal
     - Definition: Excessive fervor to do something or accomplish some end
 
