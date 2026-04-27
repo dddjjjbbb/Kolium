@@ -18,7 +18,8 @@ class TestGenerateDocument:
         assert "## Table of Contents" in result
         assert "- [People](#people)" in result
         assert "- [Notes](#notes)" in result
-        assert "- [Words](#words)" in result
+        # "vocabulary" has a definition, so appears in "Words with Definitions"
+        assert "- [Words with Definitions](#words with definitions)" in result
 
     def test_single_category_omits_toc(self, nlp):
         text = "*this is a highlight from a book*"
@@ -31,12 +32,14 @@ class TestGenerateDocument:
         result = generate_document(text, nlp=nlp)
         assert "## Table of Contents" in result
         assert "- [Notes](#notes)" in result
-        assert "- [Words](#words)" in result
+        # "vocabulary" has a definition
+        assert "- [Words with Definitions](#words with definitions)" in result
 
     def test_empty_categories_omitted(self, nlp):
         text = "*vocabulary*"
         result = generate_document(text, nlp=nlp)
-        assert "## Words" in result
+        # "vocabulary" has a definition
+        assert "## Words with Definitions" in result
         assert "## People" not in result
         assert "## Notes" not in result
 
@@ -106,3 +109,26 @@ class TestGenerateDocument:
 
         lines = result.split("\n")
         assert lines[0] == "# The Book"
+
+    def test_splits_words_into_with_and_without_definitions(self, nlp):
+        text = "*muggins*\n*connascence*\n*aberrant*"
+        result = generate_document(text, nlp=nlp)
+
+        # Should have two separate sections
+        assert "## Words with Definitions" in result
+        assert "## Words" in result
+
+        # Words with defs in first section
+        lines = result.split("\n")
+        with_defs_idx = next(i for i, l in enumerate(lines) if l == "## Words with Definitions")
+        without_defs_idx = next(i for i, l in enumerate(lines) if l == "## Words" and i > with_defs_idx)
+
+        # Check muggins (has def) in first section
+        with_section = "\n".join(lines[with_defs_idx:without_defs_idx])
+        assert "- Muggins" in with_section
+        assert "- Definition:" in with_section
+
+        # Check connascence (no def) in second section
+        without_section = "\n".join(lines[without_defs_idx:])
+        assert "- Connascence" in without_section
+        assert "- Definition:" not in without_section

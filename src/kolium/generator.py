@@ -26,10 +26,14 @@ def generate_document(text: str, nlp: spacy.language.Language | None = None) -> 
     # Remove notes that are just person names (ignoring punctuation)
     notes = _filter_person_duplicates(notes, people)
 
+    # Split words into those with and without definitions
+    words_with_defs, words_without_defs = _split_words_by_definition(words)
+
     categories = [
         ("People", people),
         ("Notes", notes),
-        ("Words", words),
+        ("Words with Definitions", words_with_defs),
+        ("Words", words_without_defs),
     ]
     populated = [(name, items) for name, items in categories if items]
 
@@ -53,7 +57,7 @@ def generate_document(text: str, nlp: spacy.language.Language | None = None) -> 
 
     for name, items in populated:
         lines.extend([f"## {name}", ""])
-        if name == "Words":
+        if name == "Words with Definitions":
             _append_words_with_definitions(lines, items)
         else:
             lines.extend(f"- {item}" for item in items)
@@ -75,6 +79,18 @@ def _filter_person_duplicates(notes: list[str], people: list[str]) -> list[str]:
 def _strip_punctuation(text: str) -> str:
     """Remove trailing punctuation for comparison."""
     return text.rstrip(".,!?;:")
+
+
+def _split_words_by_definition(words: list[str]) -> tuple[list[str], list[str]]:
+    """Split words into those with and without WordNet definitions."""
+    with_defs = []
+    without_defs = []
+    for word in words:
+        if define(word.lower()):
+            with_defs.append(word)
+        else:
+            without_defs.append(word)
+    return with_defs, without_defs
 
 
 def _append_words_with_definitions(lines: list[str], words: list[str]) -> None:
