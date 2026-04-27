@@ -16,16 +16,14 @@
 - Emanuel Swedenborg
 - Ernest Solvay
 - Erwin Rudolf Josef
-- Friss Scheiße
 - Fritz Haber
+- Hafez
 - Heinrich Böll
 - Hermann Göring
-- Ian Kershaw
 - Johann Conrad Dippel
 - Johann Jacob Diesbach
 - Johanna Grothendieck
 - Karl Schwarzschild
-- Leck mich
 - Louis de Broglie
 - Marianne von Willemer
 - Marie Curie
@@ -36,7 +34,9 @@
 - Paul Dirac
 - Pierre Raymond
 - Pieter van der Werff
-- Saint Elmo’s Fire
+- Pinochet
+- Prussian Blue
+- Shinichi Mochizuki
 - Werner Heisenberg
 - Wolfgang Pauli
 
@@ -61,6 +61,7 @@
 - Gives off a slight aroma of almonds, which not everyone can distinguish, as doing so requires a gene absent in forty per cent of humanity.
 - A significant number of the Jews murdered with Zyklon B in Auschwitz-Birkenau, Majdanek and Mauthausen did not even notice the scent of cyanide filling the gas chambers, while others died smelling the same fragrance inhaled by the men who had organized their extermination as they bit down on their suicide capsules.
 - Zyklon B.
+- Saint Elmo’s Fire
 - Blue, the same colour that can be seen even today on certain bricks at Auschwitz; both hearken to cyanide’s authentic origins as a by-product isolated in 1782 from the first modern synthetic pigment, Prussian Blue.
 - The first modern synthetic pigment, Prussian Blue.
 - As soon as it appeared, Prussian Blue caused a sensation in European art.
@@ -71,7 +72,7 @@
 - Swedish mystic Emanuel Swedenborg.
 - His aim was to enter history as the first man to transplant a soul from one body to another.
 - The chemist who discovered cyanide experienced this danger first-hand: in 1782, Carl Wilhelm Scheele stirred a pot of Prussian Blue with a spoon coated in traces of sulphuric acid and created the most potent poison of the modern era. He named this new compound “Prussic acid” and was immediately aware of the enormous potential of its hyperreactivity.
-- The apple was never examined to confirm the hypothesis of suicide (even if the seeds do contain a natural form of it, with only half a cup of them sufficient to kill a human being.
+- The apple was never examined to confirm the hypothesis of suicide (even if the seeds do contain a natural form of it, with only half a cup of them sufficient to kill a human being).
 - The terror caused by history’s first weapon of mass destruction was the universal acceptance of the prohibition on gas during the Second World War.
 - The father of this new method of war, the Jewish chemist Fritz Haber.
 - The five thousand soldiers who died at Ypres.
@@ -89,7 +90,6 @@
 - In 1910, he discovered that the stars had different colours, and he was the first to analyse them.
 - The return of Halley’s Comet, which had always been considered an ill omen: in the year 66, the historian Flavius Josephus had described it as “a star that resembles a sword.
 - “We have reached the highest point of civilization. All that is left for us is to decay and fall.”
-- Shinichi Mochizuki.
 - Inter-Universal Teichmüller Theory.
 - Grothendieck’s curse.
 - Alexander Grothendieck was one of the most important mathematicians of the twentieth century.
@@ -122,7 +122,7 @@
 - Heisenberg and Bohr presented their vision of quantum mechanics, which would come to be known as the Copenhagen Interpretation.
 - Like the moon in Buddhism, a particle does not exist: it is the act of measuring that makes it a real object.
 - The being of atoms and their elementary particles was not like that of the objects of everyday experience. They live in worlds of potentialities, Heisenberg explained; they are not things, but possibilities.
-- Every morning at breakfast—mirroring the official debates—Einstein would proffer his riddles, and every night Bohr would arrive with a solution. The duel between the two men dominated the conference, and divided the physicists into two opposing camps, but, in the end, Einstein had to yield. He had not found a single inconsistency in Bohr’s reasoning. He accepted defeat grudgingly, and condensed all his hatred of quantum mechanics in a phrase he would repeat time and again in the succeeding years, one he practically spat in the Dane’s face before his departure: “God does not play dice with the universe!”
+- “Every morning at breakfast—mirroring the official debates—Einstein would proffer his riddles, and every night Bohr would arrive with a solution. The duel between the two men dominated the conference, and divided the physicists into two opposing camps, but, in the end, Einstein had to yield. He had not found a single inconsistency in Bohr’s reasoning. He accepted defeat grudgingly, and condensed all his hatred of quantum mechanics in a phrase he would repeat time and again in the succeeding years, one he practically spat in the Dane’s face before his departure: “God does not play dice with the universe!”
 - Einstein became the greatest enemy of quantum mechanics.
 - Schrödinger’s cat, like any elementary particle, was alive and dead (at least until it was measured), and the Austrian’s name would remain associated forever with this failed attempt to negate the ideas he himself had helped give rise to.
 - Heisenberg was made a professor at the University of Leipzig at twenty-five—the youngest professor in the history of Germany.
@@ -143,7 +143,7 @@
 - Analgesic
     - Definition: Capable of relieving pain
 - Antares
-    - Definition: The brightest star in scorpius
+    - Definition: The brightest star in Scorpius
 - Apotheosis
     - Definition: The elevation of a person (as to the status of a god)
 - Calumny
@@ -179,7 +179,7 @@
 - Grandiloquence
     - Definition: High-flown style; excessive use of verbal ornamentation
 - Gypsum
-    - Definition: A common white or colorless mineral (hydrated calcium sulphate) used to make cements and plasters (especially plaster of paris)
+    - Definition: A common white or colorless mineral (hydrated calcium sulphate) used to make cements and plasters (especially plaster of Paris)
 - Harangues
     - Definition: Deliver a harangue to; address forcefully
 - Heisenberg
@@ -189,7 +189,7 @@
 - Innocuous
     - Definition: Not causing disapproval
 - Janus
-    - Definition: (roman mythology) the roman god of doorways and passages; is depicted with two faces on opposite sides of his head
+    - Definition: (Roman mythology) the Roman god of doorways and passages; is depicted with two faces on opposite sides of his head
 - Levant
     - Definition: Run off without paying a debt
 - Luminescence
@@ -205,7 +205,7 @@
 - Purulent
     - Definition: Containing pus
 - Saltpetre
-    - Definition: (kno3) used especially as a fertilizer and explosive
+    - Definition: (KNO3) used especially as a fertilizer and explosive
 - Sanatorium
     - Definition: A hospital for recuperation or for the treatment of chronic diseases
 - Scion
@@ -221,17 +221,17 @@
 - Undergirded
     - Definition: Lend moral support to
 - Valhalla
-    - Definition: (norse mythology) the hall in which the souls of heros slain in battle were received by odin
+    - Definition: (Norse mythology) the hall in which the souls of heros slain in battle were received by Odin
 - Vedanta
-    - Definition: (from the sanskrit for `end of the veda') one of six orthodox philosophical systems or viewpoints rooted in the upanishads as opposed to mimamsa which relies on the vedas and brahmanas
+    - Definition: (from the Sanskrit for `end of the Veda') one of six orthodox philosophical systems or viewpoints rooted in the Upanishads as opposed to Mimamsa which relies on the Vedas and Brahmanas
 - Veneto
-    - Definition: A region of northeastern italy on the adriatic
+    - Definition: A region of northeastern Italy on the Adriatic
 - Verdure
     - Definition: Green foliage
 - Votive
     - Definition: Dedicated in fulfillment of a vow
 - Ypres
-    - Definition: Battle in World War I (1914); heavy but indecisive fighting as the allies and the germans both tried to break through the lines of the others
+    - Definition: Battle in World War I (1914); heavy but indecisive fighting as the Allies and the Germans both tried to break through the lines of the others
 - Zeal
     - Definition: Excessive fervor to do something or accomplish some end
 
@@ -239,14 +239,11 @@
 
 - Davos
 - Gedankenexperiment
-- Grothendieck
-- Hafez
 - Heligoland
 - Hermeticism
 - Mapuches
 - Ouroboros
 - Pervitin
 - Pietist
-- Pinochet
 - Promethean
 

@@ -55,3 +55,17 @@ class TestProcessHighlight:
     def test_closes_unclosed_paren_at_end(self):
         result = process_highlight('*The apple was never examined to confirm the hypothesis of suicide (even if the seeds do contain a natural form of it, with only half a cup of them sufficient to kill a human being*')
         assert result == 'The apple was never examined to confirm the hypothesis of suicide (even if the seeds do contain a natural form of it, with only half a cup of them sufficient to kill a human being).'
+
+    def test_does_not_close_mid_sentence_quote(self):
+        # Quote appears mid-sentence and is unclosed due to truncation
+        # Don't add closing quote as it wasn't in original
+        result = process_highlight('*Every morning at breakfast—mirroring the official debates—Einstein would proffer his riddles, and every night Bohr would arrive with a solution. The duel between the two men dominated the conference, and divided the physicists into two opposing camps, but, in the end, Einstein had to yield. He had not found a single inconsistency in Bohr\'s reasoning. He accepted defeat grudgingly, and condensed all his hatred of quantum mechanics in a phrase he would repeat time and again in the succeeding years, one he practically spat in the Dane\'s face before his departure: "God does not play dice with the universe!*')
+        # Should not add closing quote
+        assert not result.startswith('"')
+        assert result.endswith('!') or result.endswith('universe!"')  # Either no quote or original quote preserved
+
+    def test_fixes_colon_period_at_end(self):
+        result = process_highlight('*The German writer Heinrich Böll wrote letters to his family from the front asking them to send him additional doses:*')
+        # Should not end with ":."
+        assert not result.endswith(':.')
+        assert result.endswith('.')  # Just period

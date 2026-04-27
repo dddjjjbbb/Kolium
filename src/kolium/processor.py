@@ -76,6 +76,11 @@ def _capitalise_first(text: str) -> str:
 
 def _ensure_ending_punctuation(text: str) -> str:
     end_marks = (".", "?", "!")
+
+    # Remove trailing colon (often from truncated quotes/lists)
+    if text.endswith(":"):
+        text = text[:-1]
+
     if text.endswith(QUOTE_CHARS):
         if len(text) > 1 and text[-2] not in end_marks:
             return text[:-1] + "." + text[-1]
