@@ -1,0 +1,252 @@
+# When We Cease to Understand the World - Benjamín Labatut
+
+## Table of Contents
+- [People](#people)
+- [Notes](#notes)
+- [Words with Definitions](#words-with-definitions)
+- [Words](#words)
+
+## People
+
+- Alexander Grothendieck
+- Alexander Schrödinger
+- Andrei Sinyavsky
+- Bernhard Rust
+- Carl Wilhelm Scheele
+- Emanuel Swedenborg
+- Ernest Solvay
+- Erwin Rudolf Josef
+- Friss Scheiße
+- Fritz Haber
+- Heinrich Böll
+- Hermann Göring
+- Ian Kershaw
+- Johann Conrad Dippel
+- Johann Jacob Diesbach
+- Johanna Grothendieck
+- Karl Schwarzschild
+- Leck mich
+- Louis de Broglie
+- Marianne von Willemer
+- Marie Curie
+- Marthe Robin
+- Maurice de Broglie
+- Max Planck
+- Otto Thierack
+- Paul Dirac
+- Pierre Raymond
+- Pieter van der Werff
+- Saint Elmo’s Fire
+- Werner Heisenberg
+- Wolfgang Pauli
+
+## Notes
+
+- When the Allied forces caught him, the Nazi leader was dragging a suitcase with more than twenty thousand doses, practically all that remained of Germany’s production of the drug at the end of the Second World War.
+- Virtually everyone in the Wehrmacht received Pervitin as part of their rations, methamphetamine tablets that the troopers used to stay awake for weeks on end, fighting in a deranged state, alternating between manic furore and nightmarish stupor, with overexertion leading many to suffer attacks of irrepressible euphoria.
+- The German writer Heinrich Böll wrote letters to his family from the front asking them to send him additional doses:.
+- Amphetamines fuelled the unrelenting German Blitzkrieg.
+- A wave of suicides swept through Germany in the final months of the war. In April 1945 alone, three thousand eight hundred people killed themselves in Berlin.
+- The small town of Demmin, to the north of the capital, some three hours away.
+- Before the dreaded onslaught of the Red Army. Hundreds of men, women and children took their own lives over the course of three days. Whole families walked into the waters of the Tollense tied together with ropes around their waists.
+- Fifty-three generals from the army, fourteen from the air force, and eleven from the navy committed suicide, along with the Minister of Education, Bernhard Rust, the Minister of Justice, Otto Thierack, Field Marshal Walter Model, the “Desert Fox” Erwin Rommel and, of course, the Führer himself. Others, such as Hermann Göring, hesitated and were captured alive.
+- Göring was found guilty by the Nuremburg Tribunal and condemned to death by hanging. He requested a firing squad: he wished to die like a soldier and not a common criminal. When he learned of the refusal of this last request, he killed himself by biting on a cyanide capsule he had hidden in a jar of pomade next to which he left a note explaining that he had chosen to die by his own hand, “like the great Hannibal”.
+- The Aktion T4 euthanasia programme.
+- In June 2016, an Argentine man paid more than three thousand euros for a pair of the Reichsmarschall’s silk underpants.
+- When the audience filed towards the exits, Brünnhilde’s cries of pain still resounding in their ears, members of the Deutsches Jungvolk—a section of the Hitler Youth composed of children under ten, as the teenagers were already off dying at the barricades—handed out cyanide capsules in small wicker baskets, like votive offerings at mass.
+- Göring, Goebbels, Bormann and Himmler used these capsules to commit suicide, but many of the Nazi leaders chose to shoot themselves in the head at the same moment they bit down, afraid that they had been sabotaged, that the capsules were deliberately adulterated to provoke not the painless, instant death that they desired but the slow agony they deserved.
+- Hitler became so convinced that his dosage had been tampered with that he chose to test its effectiveness on his beloved Blondi, a German shepherd that had accompanied him to the Führerbunker, where she slept at the foot of his bed, enjoying privileges of all kinds.
+- The effects of cyanide are so swift that there is but one historical account of its flavour, left behind in the early twenty-first century by M.P. Prasad, an Indian goldsmith, thirty-two years old, who managed to write three lines after swallowing it: “Doctors, potassium cyanide. I have tasted it. It burns the tongue and tastes acrid,” said the note found next to his body in the hotel room he had rented for the purpose of taking his own life.
+- The liquid form of the poison, known in Germany as Blausäure or blue acid.
+- Gives off a slight aroma of almonds, which not everyone can distinguish, as doing so requires a gene absent in forty per cent of humanity.
+- A significant number of the Jews murdered with Zyklon B in Auschwitz-Birkenau, Majdanek and Mauthausen did not even notice the scent of cyanide filling the gas chambers, while others died smelling the same fragrance inhaled by the men who had organized their extermination as they bit down on their suicide capsules.
+- Zyklon B.
+- Blue, the same colour that can be seen even today on certain bricks at Auschwitz; both hearken to cyanide’s authentic origins as a by-product isolated in 1782 from the first modern synthetic pigment, Prussian Blue.
+- The first modern synthetic pigment, Prussian Blue.
+- As soon as it appeared, Prussian Blue caused a sensation in European art.
+- Ultramarine, the finest and costliest of all blue pigments, which was obtained by grinding lapis lazuli brought up from caves in Afghanistan’s Kochka river valley.
+- A Swiss pigmenter and dyer by the name of Johann Jacob Diesbach discovered Prussian Blue.
+- Frisch amassed a fortune as a wholesaler of Prussian Blue to shops in Paris, London and St Petersburg. He used his profits to buy hundreds of hectares near Spandau, where he established the first silk plantation in Prussia.
+- The first great painter to make use of it was the Dutchman Pieter van der Werff, in 1709: in his portrayal of The Entombment of Christ clouds mask the horizon, and the blue cloak that darkens the Virgin’s face shimmers, reflecting the grief of the disciples who surround the naked corpse of the Messiah, his skin so pallid it illuminates the face of the woman kneeling to kiss the back of his hand, as though wishing to cauterize with her lips the wounds opened by the iron nails.
+- Swedish mystic Emanuel Swedenborg.
+- His aim was to enter history as the first man to transplant a soul from one body to another.
+- The chemist who discovered cyanide experienced this danger first-hand: in 1782, Carl Wilhelm Scheele stirred a pot of Prussian Blue with a spoon coated in traces of sulphuric acid and created the most potent poison of the modern era. He named this new compound “Prussic acid” and was immediately aware of the enormous potential of its hyperreactivity.
+- The apple was never examined to confirm the hypothesis of suicide (even if the seeds do contain a natural form of it, with only half a cup of them sufficient to kill a human being.
+- The terror caused by history’s first weapon of mass destruction was the universal acceptance of the prohibition on gas during the Second World War.
+- The father of this new method of war, the Jewish chemist Fritz Haber.
+- The five thousand soldiers who died at Ypres.
+- Perverting science by devising a method for exterminating human beings on an industrial scale.
+- The English tomb raiders had exhausted the reserves in continental Europe; they dug up more than three million human skeletons, along with the bones of hundreds of thousands of dead horses that soldiers had ridden in the battles of Austerlitz, Leipzig and Waterloo, sending them by ship to the port of Hull in the north of England, where they were ground in the bone mills of Yorkshire to fertilize the verdant fields of Albion.
+- The Northwestern Bone Syndicate of North Dakota.
+- The Haber–Bosch process is the most important chemical discovery of the twentieth century.
+- Today, nearly fifty per cent of the nitrogen atoms in our bodies are artificially created, and more than half the world population depends on foodstuffs fertilized thanks to Haber’s invention.
+- The modern world could not exist without “the man who pulled bread from air”, in the words of the press of the day.
+- Kaiser Wilhelm II.
+- Zyklon, the German word for cyclone.
+- The Schwarzschild singularity.
+- A metaphysical delirium.
+- Johannes Kepler’s Harmonice Mundi, which expressed the view that each planet generated a melody in its transit around the sun.
+- In 1910, he discovered that the stars had different colours, and he was the first to analyse them.
+- The return of Halley’s Comet, which had always been considered an ill omen: in the year 66, the historian Flavius Josephus had described it as “a star that resembles a sword.
+- “We have reached the highest point of civilization. All that is left for us is to decay and fall.”
+- Shinichi Mochizuki.
+- Inter-Universal Teichmüller Theory.
+- Grothendieck’s curse.
+- Alexander Grothendieck was one of the most important mathematicians of the twentieth century.
+- His father’s real name has not come down to us, as he lived under multiple aliases while participating in the anarchist movements that rocked Europe at the beginning of the twentieth century.
+- Le Vernet.
+- His son took the last name of his mother, Johanna Grothendieck, a woman who wrote her entire life, though she never managed to publish her novels or poems.
+- When Grothendieck was five, his mother left him in the hands of a Protestant pastor to travel to Spain and fight with the anarchists against Franco.
+- A Nansen passport, which classified him as “stateless”.
+- The writers Yuli Daniel and Andrei Sinyavsky.
+- René Thom.
+- Frustrated by his incapacity to rival Grothendieck’s vertiginous output of groundbreaking ideas, Thom abandoned pure mathematics to develop catastrophe theory, a mathematical treatment that describes seven ways in which any dynamic system—be it a river, a tectonic fault or the fragile mind of a human being—can suddenly lose its equilibrium and collapse, falling into disorder and chaos.
+- “The atoms that tore Hiroshima and Nagasaki apart were split not by the greasy fingers of a general, but by a group of physicists armed with a fistful of equations.”
+- Grothendieck could not stop fretting over the possible effects that his own ideas could have on the world.
+- The French mystic Marthe Robin.
+- Matrix mechanics.
+- Prince Louis-Victor Pierre Raymond, 7th duc de Broglie.
+- Rue de Chateaubriand.
+- The first Solvay Conference, the most prestigious scientific gathering in Europe.
+- Jean-Baptiste Vasek.
+- He announced a grand exhibition, “La Folie des Hommes”, attributing its curatorship to his friend.
+- Erwin Rudolf Josef Alexander Schrödinger.
+- The Great War.
+- Leck mich am Arsch! Friss Scheiße und krepier!
+- Wave functions.
+- Who could bear to stay in a single place his whole life? That’s fine for a stone.
+- It was impossible to “see” a quantum entity for the simple reason that it did not have a single identity.
+- A particle could cross space in many ways, but from among them it chose only one. How?
+- Paul Dirac, Wolfgang Pauli, Max Planck and Marie Curie.
+- Quantum mechanics.
+- Heisenberg and Bohr presented their vision of quantum mechanics, which would come to be known as the Copenhagen Interpretation.
+- Like the moon in Buddhism, a particle does not exist: it is the act of measuring that makes it a real object.
+- The being of atoms and their elementary particles was not like that of the objects of everyday experience. They live in worlds of potentialities, Heisenberg explained; they are not things, but possibilities.
+- Every morning at breakfast—mirroring the official debates—Einstein would proffer his riddles, and every night Bohr would arrive with a solution. The duel between the two men dominated the conference, and divided the physicists into two opposing camps, but, in the end, Einstein had to yield. He had not found a single inconsistency in Bohr’s reasoning. He accepted defeat grudgingly, and condensed all his hatred of quantum mechanics in a phrase he would repeat time and again in the succeeding years, one he practically spat in the Dane’s face before his departure: “God does not play dice with the universe!”
+- Einstein became the greatest enemy of quantum mechanics.
+- Schrödinger’s cat, like any elementary particle, was alive and dead (at least until it was measured), and the Austrian’s name would remain associated forever with this failed attempt to negate the ideas he himself had helped give rise to.
+- Heisenberg was made a professor at the University of Leipzig at twenty-five—the youngest professor in the history of Germany.
+- The man who invented modern-day nitrogen fertilizers—a German chemist called Fritz Haber—was also the first man to create a weapon of mass destruction, namely chlorine gas, which he poured into the trenches of the First World War.
+- Today nitrogen is more than plentiful, but in centuries past wars were fought over bird and bat shit, and thieves ransacked the bones of the Egyptian pharaohs to steal the nitrogen hidden in their bones.
+- Mapuche Indians would crush the skeletons of their vanquished enemies and spread that dust on their farms as fertilizer.
+- The sudden realization that it was mathematics—not nuclear weapons, computers, biological warfare or our climate Armageddon—which was changing our world to the point where, in a couple of decades at most, we would simply not be able to grasp what being human really meant.
+- They succumb from overabundance. When they come to the end of their life cycle, they put out a final, massive crop of lemons. In their last spring their flowers bud and blossom in enormous bunches and fill the air with a smell so sweet that it stings your nostrils from two blocks away; then their fruits ripen all at once, whole limbs break off due to their excessive weight, and after a few weeks the ground is covered with rotting lemons. It is a strange sight, he said, to see such exuberance before death.
+- This is a work of fiction based on real events. The quantity of fiction grows throughout the book; whereas “Prussian Blue” contains only one fictional paragraph, I have taken greater liberties in the subsequent texts, while still trying to remain faithful to the scientific concepts discussed in each of them.
+- Who Is Alexander Grothendieck? Anarchy, Mathematics, Spirituality, Solitude; Ian Kershaw.
+
+## Words with Definitions
+
+- Abdication
+    - Definition: The act of abdicating
+- Aberrant
+    - Definition: Markedly different from an accepted norm
+- Analgesic
+    - Definition: Capable of relieving pain
+- Antares
+    - Definition: The brightest star in scorpius
+- Apotheosis
+    - Definition: The elevation of a person (as to the status of a god)
+- Calumny
+    - Definition: An abusive attack on a person's character or good name
+- Capacious
+    - Definition: Large in capacity
+- Capitulated
+    - Definition: Surrender under agreed conditions
+- Capricious
+    - Definition: Changeable
+- Chimera
+    - Definition: A grotesque product of the imagination
+- Cochineals
+    - Definition: A red dyestuff consisting of dried bodies of female cochineal insects
+- Complementarity
+    - Definition: The interrelation of reciprocity whereby one thing supplements or depends on the other
+- Consecration
+    - Definition: A solemn commitment of your life or your time to some cherished purpose (to a service or a goal)
+- Contrivance
+    - Definition: The faculty of contriving; inventive skill
+- Diffuse
+    - Definition: Move outward
+- Edifice
+    - Definition: A structure that has a roof and walls and stands more or less permanently in one place
+- Etherized
+    - Definition: Anesthetize with ether
+- Exorcise
+    - Definition: Expel through adjuration or prayers
+- Fumigant
+    - Definition: A chemical substance used in fumigation
+- Genuflection
+    - Definition: The act of bending the knees in worship or reverence
+- Grandiloquence
+    - Definition: High-flown style; excessive use of verbal ornamentation
+- Gypsum
+    - Definition: A common white or colorless mineral (hydrated calcium sulphate) used to make cements and plasters (especially plaster of paris)
+- Harangues
+    - Definition: Deliver a harangue to; address forcefully
+- Heisenberg
+    - Definition: German mathematical physicist noted for stating the uncertainty principle (1901-1976)
+- Indolent
+    - Definition: (of tumors, e.g.) slow to heal or develop and usually painless
+- Innocuous
+    - Definition: Not causing disapproval
+- Janus
+    - Definition: (roman mythology) the roman god of doorways and passages; is depicted with two faces on opposite sides of his head
+- Levant
+    - Definition: Run off without paying a debt
+- Luminescence
+    - Definition: Light from nonthermal sources
+- Massifs
+    - Definition: A block of the earth's crust bounded by faults and shifted to form peaks of a mountain range
+- Miasma
+    - Definition: An unwholesome atmosphere
+- Penury
+    - Definition: A state of extreme poverty or destitution
+- Preened
+    - Definition: Clean with one's bill
+- Purulent
+    - Definition: Containing pus
+- Saltpetre
+    - Definition: (kno3) used especially as a fertilizer and explosive
+- Sanatorium
+    - Definition: A hospital for recuperation or for the treatment of chronic diseases
+- Scion
+    - Definition: A descendent or heir
+- Scudding
+    - Definition: Run before a gale
+- Suppurating
+    - Definition: Ripen and generate pus
+- Tottered
+    - Definition: Walk unsteadily
+- Tsarina
+    - Definition: The wife or widow of a czar
+- Undergirded
+    - Definition: Lend moral support to
+- Valhalla
+    - Definition: (norse mythology) the hall in which the souls of heros slain in battle were received by odin
+- Vedanta
+    - Definition: (from the sanskrit for `end of the veda') one of six orthodox philosophical systems or viewpoints rooted in the upanishads as opposed to mimamsa which relies on the vedas and brahmanas
+- Veneto
+    - Definition: A region of northeastern italy on the adriatic
+- Verdure
+    - Definition: Green foliage
+- Votive
+    - Definition: Dedicated in fulfillment of a vow
+- Ypres
+    - Definition: Battle in world war i (1914); heavy but indecisive fighting as the allies and the germans both tried to break through the lines of the others
+- Zeal
+    - Definition: Excessive fervor to do something or accomplish some end
+
+## Words
+
+- Davos
+- Gedankenexperiment
+- Grothendieck
+- Hafez
+- Heligoland
+- Hermeticism
+- Mapuches
+- Ouroboros
+- Pervitin
+- Pietist
+- Pinochet
+- Promethean
+

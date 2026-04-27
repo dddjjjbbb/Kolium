@@ -52,7 +52,7 @@ def generate_document(text: str, nlp: spacy.language.Language | None = None) -> 
 
     if len(populated) >= 2:
         lines.append("## Table of Contents")
-        lines.extend(f"- [{name}](#{name.lower()})" for name, _ in populated)
+        lines.extend(f"- [{name}](#{_slugify(name)})" for name, _ in populated)
         lines.append("")
 
     for name, items in populated:
@@ -91,6 +91,11 @@ def _split_words_by_definition(words: list[str]) -> tuple[list[str], list[str]]:
         else:
             without_defs.append(word)
     return with_defs, without_defs
+
+
+def _slugify(text: str) -> str:
+    """Convert text to lowercase kebab-case for markdown anchors."""
+    return text.lower().replace(" ", "-")
 
 
 def _append_words_with_definitions(lines: list[str], words: list[str]) -> None:

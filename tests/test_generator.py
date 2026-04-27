@@ -19,7 +19,7 @@ class TestGenerateDocument:
         assert "- [People](#people)" in result
         assert "- [Notes](#notes)" in result
         # "vocabulary" has a definition, so appears in "Words with Definitions"
-        assert "- [Words with Definitions](#words with definitions)" in result
+        assert "- [Words with Definitions](#words-with-definitions)" in result
 
     def test_single_category_omits_toc(self, nlp):
         text = "*this is a highlight from a book*"
@@ -33,7 +33,7 @@ class TestGenerateDocument:
         assert "## Table of Contents" in result
         assert "- [Notes](#notes)" in result
         # "vocabulary" has a definition
-        assert "- [Words with Definitions](#words with definitions)" in result
+        assert "- [Words with Definitions](#words-with-definitions)" in result
 
     def test_empty_categories_omitted(self, nlp):
         text = "*vocabulary*"
