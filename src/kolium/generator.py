@@ -26,6 +26,9 @@ def generate_document(text: str, nlp: spacy.language.Language | None = None) -> 
     # Remove notes that are just person names (ignoring punctuation)
     notes = _filter_person_duplicates(notes, people)
 
+    # Remove notes containing only extracted people + connectives
+    notes = _filter_people_only_notes(notes, people)
+
     # Split words into those with and without definitions
     words_with_defs, words_without_defs = _split_words_by_definition(words)
 
@@ -74,6 +77,33 @@ def _filter_person_duplicates(notes: list[str], people: list[str]) -> list[str]:
         for note in notes
         if _strip_punctuation(note) not in people_normalised
     ]
+
+
+def _filter_people_only_notes(notes: list[str], people: list[str]) -> list[str]:
+    """Remove notes that contain only person names and connectives.
+
+    If all words in a note are either person names or common connectives
+    (and, or, commas), the note is redundant as all people are already
+    listed separately.
+    """
+    connectives = {"and", "or", "&"}
+
+    filtered = []
+    for note in notes:
+        # Remove all person names from note
+        remaining = note
+        for person in people:
+            remaining = remaining.replace(person, "")
+
+        # Remove punctuation and connectives
+        words = remaining.replace(",", "").replace(".", "").split()
+        words = [w for w in words if w.lower() not in connectives]
+
+        # If substantive words remain, keep the note
+        if words:
+            filtered.append(note)
+
+    return filtered
 
 
 def _strip_punctuation(text: str) -> str:

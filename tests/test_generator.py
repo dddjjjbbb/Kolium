@@ -110,6 +110,19 @@ class TestGenerateDocument:
         lines = result.split("\n")
         assert lines[0] == "# The Book"
 
+    def test_removes_notes_containing_only_extracted_people(self, nlp):
+        text = "*Paul Dirac, Wolfgang Pauli, Max Planck and Marie Curie.*"
+        result = generate_document(text, nlp=nlp)
+
+        # All people extracted
+        assert "Paul Dirac" in result
+        assert "Wolfgang Pauli" in result
+        assert "Max Planck" in result
+        assert "Marie Curie" in result
+
+        # Note should be removed (only contains names + punctuation)
+        assert "## Notes" not in result
+
     def test_splits_words_into_with_and_without_definitions(self, nlp):
         text = "*muggins*\n*connascence*\n*aberrant*"
         result = generate_document(text, nlp=nlp)
