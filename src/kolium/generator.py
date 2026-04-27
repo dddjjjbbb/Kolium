@@ -18,10 +18,17 @@ def generate_document(text: str, nlp: spacy.language.Language | None = None) -> 
     if nlp is None:
         nlp = spacy.load("en_core_web_sm")
 
+    people = extract_people(text, nlp)
+    notes = extract_notes(text)
+    words = extract_words(text, nlp)
+
+    # Remove notes that are just person names (ignoring punctuation)
+    notes = _filter_person_duplicates(notes, people)
+
     categories = [
-        ("People", extract_people(text, nlp)),
-        ("Notes", extract_notes(text)),
-        ("Words", extract_words(text, nlp)),
+        ("People", people),
+        ("Notes", notes),
+        ("Words", words),
     ]
     populated = [(name, items) for name, items in categories if items]
 
@@ -44,6 +51,21 @@ def generate_document(text: str, nlp: spacy.language.Language | None = None) -> 
         lines.append("")
 
     return "\n".join(lines) + "\n"
+
+
+def _filter_person_duplicates(notes: list[str], people: list[str]) -> list[str]:
+    """Remove notes that match person names when punctuation is stripped."""
+    people_normalised = {_strip_punctuation(name) for name in people}
+    return [
+        note
+        for note in notes
+        if _strip_punctuation(note) not in people_normalised
+    ]
+
+
+def _strip_punctuation(text: str) -> str:
+    """Remove trailing punctuation for comparison."""
+    return text.rstrip(".,!?;:")
 
 
 def _append_words_with_definitions(lines: list[str], words: list[str]) -> None:

@@ -65,3 +65,30 @@ class TestGenerateDocument:
     def test_empty_text_returns_empty(self, nlp):
         result = generate_document("", nlp=nlp)
         assert result == ""
+
+    def test_person_names_removed_from_notes_when_in_people(self, nlp):
+        text = "*Fritz Haber*\n*Heinrich Böll*\n*Hermann Göring*\n*Hermann Göring.*"
+        result = generate_document(text, nlp=nlp)
+
+        # All three should be in People section
+        assert "## People" in result
+        assert "- Fritz Haber" in result
+        assert "- Heinrich Böll" in result
+        assert "- Hermann Göring" in result
+
+        # Notes section should be empty (person name duplicate removed)
+        lines = result.split("\n")
+        notes_idx = next(
+            (i for i, line in enumerate(lines) if line == "## Notes"), None
+        )
+        if notes_idx is not None:
+            # Check lines after "## Notes" heading until next section or end
+            notes_content = []
+            for line in lines[notes_idx + 1 :]:
+                if line.startswith("## "):
+                    break
+                if line.strip() and not line.startswith("-"):
+                    continue
+                if line.strip():
+                    notes_content.append(line)
+            assert len(notes_content) == 0, f"Notes should be empty but got: {notes_content}"
