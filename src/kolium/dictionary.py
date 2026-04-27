@@ -29,6 +29,19 @@ def is_common_phrase(phrase: str) -> bool:
     )
 
 
+def is_very_common_phrase(phrase: str) -> bool:
+    """True if all words are highly common (8+ synsets each).
+
+    Filters technical concepts like "Reading List" where all words
+    are very common. Person names usually have at least one less
+    common word.
+    """
+    return all(
+        len(wn.synsets(word)) >= 8
+        for word in phrase.lower().split()
+    )
+
+
 def has_unknown_words(phrase: str) -> bool:
     """True if all words are lowercase AND have no WordNet entry.
 
