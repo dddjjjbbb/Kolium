@@ -22,9 +22,9 @@ def remove_nbsp(text: str) -> str:
 def extract_people(text: str, nlp: spacy.language.Language) -> list[str]:
     """Extract person names from highlight contents via spaCy NER.
 
-    Filters out false positives using two heuristics: entities must be
-    at least two words, and entities where every word is a common
-    English dictionary word are rejected.
+    Filters out false positives using heuristics: entities must be
+    at least two words, common phrases are rejected, and possessive
+    forms are excluded.
     """
     from kolium.dictionary import is_common_phrase
 
@@ -39,6 +39,7 @@ def extract_people(text: str, nlp: spacy.language.Language) -> list[str]:
                 ent.label_ == "PERSON"
                 and len(name.split()) >= 2
                 and not is_common_phrase(name)
+                and not name.endswith("'s")
             ):
                 people.add(name)
     return sorted(people)

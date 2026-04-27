@@ -73,6 +73,19 @@ class TestPeopleFromHighlights:
         assert "Tidy" not in people
         assert "Tidy First" not in people
 
+    def test_film_titles_not_in_people(self, nlp):
+        text = "*Saint Elmo's Fire*"
+        people = extract_people(text, nlp)
+        # spaCy extracts "Saint Elmo's" but possessive filter rejects it
+        assert "Saint Elmo's Fire" not in people
+        assert "Saint Elmo's" not in people
+
+    def test_foreign_phrases_not_in_people(self, nlp):
+        text = "*Leck mich*\n*Friss Scheiße*"
+        people = extract_people(text, nlp)
+        assert "Leck mich" not in people
+        assert "Friss Scheiße" not in people
+
 
 class TestWordsFromHighlights:
     """Tests that single-word highlights become titlecased vocabulary entries."""
