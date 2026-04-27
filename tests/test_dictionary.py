@@ -16,6 +16,11 @@ class TestDefine:
         result = define("recapitulation")
         assert "summary" in result.lower()
 
+    def test_capitalises_proper_nouns_in_definitions(self):
+        result = define("ypres")
+        # Should capitalize "World War I" not "world war i"
+        assert "World War I" in result or "World War" in result
+
 
 class TestIsCommonPhrase:
     def test_common_phrase_is_true(self):

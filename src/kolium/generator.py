@@ -103,4 +103,6 @@ def _append_words_with_definitions(lines: list[str], words: list[str]) -> None:
         lines.append(f"- {word}")
         definition = define(word.lower())
         if definition:
-            lines.append(f"    - Definition: {definition.capitalize()}")
+            # Ensure first char uppercase, preserve rest (e.g., "World War I")
+            formatted = definition[0].upper() + definition[1:] if definition else ""
+            lines.append(f"    - Definition: {formatted}")
