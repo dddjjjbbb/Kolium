@@ -82,7 +82,7 @@ def _parse_header(path: Path) -> tuple[str, str]:
     title = ""
     author = ""
     try:
-        with path.open(encoding="utf-8") as f:
+        with path.open(encoding="utf-8", errors="ignore") as f:
             for line in f:
                 stripped = line.strip()
                 if stripped.startswith("# ") and not stripped.startswith("## "):

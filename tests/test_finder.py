@@ -115,6 +115,22 @@ class TestListAllBooks:
         assert len(books) == 1
         assert books[0].title == "Real Book"
 
+    def test_should_handle_files_with_invalid_utf8_bytes(self, tmp_path):
+        # File with non-UTF8 bytes (latin-1 degree symbol at byte 0xb0)
+        bad_encoding = tmp_path / "2025-01-01-00-00-00-bad.md"
+        bad_encoding.write_bytes(b"# Title with degree \xb0 symbol\n##### Author\n")
+
+        good_file = tmp_path / "2025-01-01-00-00-00-good.md"
+        good_file.write_text("# Good Book\n##### Good Author\n")
+
+        books = list_all_books(tmp_path)
+
+        # Both files should be parsed, bad bytes are ignored
+        assert len(books) == 2
+        titles = {b.title for b in books}
+        assert "Good Book" in titles
+        assert "Title with degree  symbol" in titles
+
 
 class TestFindEpubs:
     @pytest.fixture()
