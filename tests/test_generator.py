@@ -92,3 +92,17 @@ class TestGenerateDocument:
                 if line.strip():
                     notes_content.append(line)
             assert len(notes_content) == 0, f"Notes should be empty but got: {notes_content}"
+
+    def test_includes_h1_with_title_and_author(self, nlp):
+        text = "# When We Cease to Understand the World\n##### Benjamín Labatut\n\n*this is a note*"
+        result = generate_document(text, nlp=nlp)
+
+        lines = result.split("\n")
+        assert lines[0] == "# When We Cease to Understand the World - Benjamín Labatut"
+
+    def test_h1_with_title_only_when_no_author(self, nlp):
+        text = "# The Book\n\n*this is a note*"
+        result = generate_document(text, nlp=nlp)
+
+        lines = result.split("\n")
+        assert lines[0] == "# The Book"

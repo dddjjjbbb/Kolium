@@ -66,6 +66,23 @@ def extract_notes(text: str) -> list[str]:
     ]
 
 
+def extract_header(text: str) -> tuple[str, str]:
+    """Extract title and author from markdown header lines.
+
+    Returns (title, author). Empty strings if not found.
+    """
+    title = ""
+    author = ""
+    for line in text.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("# ") and not stripped.startswith("## "):
+            title = stripped.removeprefix("# ")
+        elif stripped.startswith("##### "):
+            author = stripped.removeprefix("##### ")
+            break
+    return title, author
+
+
 
 def _single_word_highlights(text: str) -> list[str]:
     return [

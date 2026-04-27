@@ -5,7 +5,7 @@ from __future__ import annotations
 import spacy
 
 from kolium.dictionary import define
-from kolium.parser import extract_notes, extract_people, extract_words
+from kolium.parser import extract_header, extract_notes, extract_people, extract_words
 
 
 def generate_document(text: str, nlp: spacy.language.Language | None = None) -> str:
@@ -18,6 +18,7 @@ def generate_document(text: str, nlp: spacy.language.Language | None = None) -> 
     if nlp is None:
         nlp = spacy.load("en_core_web_sm")
 
+    title, author = extract_header(text)
     people = extract_people(text, nlp)
     notes = extract_notes(text)
     words = extract_words(text, nlp)
@@ -36,6 +37,14 @@ def generate_document(text: str, nlp: spacy.language.Language | None = None) -> 
         return ""
 
     lines: list[str] = []
+
+    # Add H1 header with title and author
+    if title:
+        if author:
+            lines.append(f"# {title} - {author}")
+        else:
+            lines.append(f"# {title}")
+        lines.append("")
 
     if len(populated) >= 2:
         lines.append("## Table of Contents")
