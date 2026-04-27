@@ -47,3 +47,11 @@ class TestProcessHighlight:
     def test_preserves_question_mark_inside_quotes(self):
         result = process_highlight('*"Is this right?"*')
         assert result == '"Is this right?"'
+
+    def test_closes_unclosed_quote_at_end(self):
+        result = process_highlight('*the historian Flavius Josephus had described it as "a star that resembles a sword*')
+        assert result == 'The historian Flavius Josephus had described it as "a star that resembles a sword."'
+
+    def test_closes_unclosed_paren_at_end(self):
+        result = process_highlight('*The apple was never examined to confirm the hypothesis of suicide (even if the seeds do contain a natural form of it, with only half a cup of them sufficient to kill a human being*')
+        assert result == 'The apple was never examined to confirm the hypothesis of suicide (even if the seeds do contain a natural form of it, with only half a cup of them sufficient to kill a human being).'

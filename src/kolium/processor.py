@@ -19,6 +19,7 @@ def process_highlight(highlight: str) -> str:
 
     text = _strip_trailing_commas(text)
     text = _normalise_quotes(text)
+    text = _balance_symbols(text)
     text = _capitalise_first(text)
     text = _ensure_ending_punctuation(text)
     return text
@@ -45,6 +46,23 @@ def _normalise_quotes(text: str) -> str:
     # Mirror a trailing quote at the front if missing
     if has_trailing_quote and not has_leading_quote:
         text = text[-1] + text
+
+    return text
+
+
+def _balance_symbols(text: str) -> str:
+    """Close unclosed quotes and parentheses at end of text."""
+    # For quotes where open == close char, check if odd count
+    if text.count('"') % 2 == 1:
+        text += '"'
+
+    # For paired symbols with different open/close chars
+    pairs = [("(", ")"), ("[", "]")]
+    for open_char, close_char in pairs:
+        open_count = text.count(open_char)
+        close_count = text.count(close_char)
+        if open_count > close_count:
+            text += close_char * (open_count - close_count)
 
     return text
 
