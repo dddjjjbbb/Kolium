@@ -5,6 +5,12 @@ import pytest
 from kolium.cli import main
 
 
+@pytest.fixture(autouse=True)
+def isolated_cwd(tmp_path, monkeypatch):
+    """Keep CLI output files out of the repo root; run in a temp dir."""
+    monkeypatch.chdir(tmp_path)
+
+
 @pytest.fixture()
 def clipboard_dir(tmp_path):
     """Create a fake clipboard directory with sample highlight files."""
@@ -73,7 +79,9 @@ class TestSearchMode:
         assert "Available books" in captured.out
         assert "Shadowbahn" in captured.out
 
-    def test_should_show_export_instructions_when_epub_found(self, clipboard_dir, tmp_path, capsys):
+    def test_should_show_export_instructions_when_epub_found(
+        self, clipboard_dir, tmp_path, capsys
+    ):
         library = tmp_path / "library"
         library.mkdir()
         (library / "Moby Dick - Herman Melville.epub").write_bytes(b"")
@@ -135,7 +143,11 @@ class TestSearchMode:
         main(["--clipboard-dir", str(clipboard_dir), "--list"])
 
         captured = capsys.readouterr()
-        lines = [line.strip() for line in captured.out.splitlines() if line.strip().startswith(("Shadow", "The"))]
+        lines = [
+            line.strip()
+            for line in captured.out.splitlines()
+            if line.strip().startswith(("Shadow", "The"))
+        ]
         titles = [line.split(" by ")[0] for line in lines]
         assert titles == sorted(titles, key=str.lower)
 
@@ -198,7 +210,9 @@ class TestBrowseMode:
         captured = capsys.readouterr()
         assert "no highlight files found" in captured.err.lower()
 
-    def test_should_return_error_when_selection_cancelled(self, clipboard_dir, capsys, monkeypatch):
+    def test_should_return_error_when_selection_cancelled(
+        self, clipboard_dir, capsys, monkeypatch
+    ):
         monkeypatch.setattr("builtins.input", lambda _: "q")
 
         result = main(["--clipboard-dir", str(clipboard_dir)])
