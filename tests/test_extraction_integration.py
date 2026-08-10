@@ -145,7 +145,10 @@ class TestNotesFromHighlights:
         assert notes[0] == "In England, the umbrella life."
 
     def test_long_highlight_preserved(self, nlp):
-        text = "*Learn when to say yes. No. Yes to life. Yes to death. Yes to love as it happens and yes when it doesn't.*"
+        text = (
+            "*Learn when to say yes. No. Yes to life. Yes to death. "
+            "Yes to love as it happens and yes when it doesn't.*"
+        )
         notes = extract_notes(text)
         assert "Learn when to say yes." in notes[0]
 
