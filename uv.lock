@@ -308,7 +308,7 @@ requires-dist = [
     { name = "nltk", specifier = ">=3.9" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.0" },
     { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.9" },
-    { name = "simple-term-menu", specifier = ">=1.6" },
+    { name = "simple-term-menu", specifier = ">=1.4,<1.5" },
     { name = "spacy", specifier = ">=3.7" },
 ]
 
@@ -941,11 +941,11 @@ wheels = [
 
 [[package]]
 name = "simple-term-menu"
-version = "1.6.6"
+version = "1.4.1"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/d8/80/f0f10b4045628645a841d3d98b584a8699005ee03a211fc7c45f6c6f0e99/simple_term_menu-1.6.6.tar.gz", hash = "sha256:9813d36f5749d62d200a5599b1ec88469c71378312adc084c00c00bfbb383893", size = 35493 }
+sdist = { url = "https://files.pythonhosted.org/packages/de/08/08c19f7653a9d7c73df024090243a8a44583b613f8f1ed51d79cbb5ae70e/simple-term-menu-1.4.1.tar.gz", hash = "sha256:401e7efc6726e195b8e62bfcede51298dc0daf8c5f043a521c8828191b0b012e", size = 33401 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/9c/09/21d993e394c1fe5c44cd90453d88ed44932da8dfca006e424c072d77d29b/simple_term_menu-1.6.6-py3-none-any.whl", hash = "sha256:c2a869efa7a9f7e4a9c25858b42ca6974034951c137d5e281f5339b06ed8c9c2", size = 27600 },
+    { url = "https://files.pythonhosted.org/packages/de/82/57788480e179a73ec9a58bb5538a8bd0eac3588fa750c23f0041244e10ad/simple_term_menu-1.4.1-py3-none-any.whl", hash = "sha256:35cfbf6e855c347938c2da27a619cf0e212bc72a48bb86e43fa462ec7d7bccec", size = 25998 },
 ]
 
 [[package]]

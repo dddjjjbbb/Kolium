@@ -154,3 +154,105 @@ def _is_highlight_line(line: str) -> bool:
 
 def _highlight_content(line: str) -> str:
     return line.strip()[1:-1].strip()
+
+
+def _is_structural_marker(line: str) -> bool:
+    """True if line is a structural marker (header, highlight, separator)."""
+    stripped = line.strip()
+    return bool(
+        stripped.startswith("# ")
+        or stripped.startswith("## ")
+        or stripped.startswith("### ")
+        or _is_highlight_line(line)
+        or stripped == "---"
+    )
+
+
+def _collect_note_lines(lines: list[str], start: int) -> tuple[list[str], int]:
+    """Collect annotation text from *start* until the next structural marker.
+
+    Returns ``(note_parts, end_index)`` where *end_index* is the first
+    line after the note (the structural marker line or end of input).
+    """
+    note_parts: list[str] = []
+    k = start
+    while k < len(lines):
+        stripped = lines[k].strip()
+        if not stripped:
+            k += 1
+            continue
+        if _is_structural_marker(lines[k]):
+            break
+        note_parts.append(stripped)
+        k += 1
+    return note_parts, k
+
+
+def pair_notes_with_highlights(text: str) -> list[tuple[str, str]]:
+    """Pair each user note with its source highlight text.
+
+    Each note in KOReader's markdown export is separated from its highlight
+    by a ``---`` line. This function associates each note with the most
+    recent highlight that precedes it.
+
+    Returns a list of ``(source_text, note_text)`` tuples in document order.
+    """
+    lines = _normalised_lines(text)
+    pairs: list[tuple[str, str]] = []
+    current_highlight: str | None = None
+
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+
+        if _is_highlight_line(line):
+            current_highlight = _highlight_content(line)
+            i += 1
+        elif line.strip() == "---":
+            note_parts, end = _collect_note_lines(lines, i + 1)
+            if note_parts and current_highlight is not None:
+                pairs.append((current_highlight, " ".join(note_parts)))
+            i = end
+        else:
+            i += 1
+
+    return pairs
+
+
+def extract_annotations(text: str) -> list[str]:
+    """Extract user notes (annotations) from KOReader markdown exports.
+
+    KOReader includes user-written notes in the markdown export, separated
+    from highlights by a ``---`` line. The note may appear either after
+    its highlight::
+
+        *highlighted passage*
+        ---
+        user's note
+
+    Or before it::
+
+        ---
+        user's note
+        ### Page X @ ...
+        *highlighted passage*
+
+    This function handles both positions.
+    """
+    lines = _normalised_lines(text)
+    annotations: list[str] = []
+
+    i = 0
+    while i < len(lines):
+        line = lines[i].strip()
+
+        if line == "---":
+            # Collect note text until next structural marker
+            note_parts, end = _collect_note_lines(lines, i + 1)
+            if note_parts:
+                annotations.append(" ".join(note_parts))
+            i = end
+        else:
+            i += 1
+
+    return annotations

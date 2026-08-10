@@ -1,6 +1,6 @@
 # Kolium
 
-Turns KOReader highlight exports into tidy, sorted Markdown. Splits your highlights into **People**, **Notes**, and **Words** sections using spaCy NER.
+Turns KOReader highlight exports into tidy, sorted Markdown. Splits your highlights into **People**, **Notes**, **Words**, and **Annotations** sections using spaCy NER. Also exports the notes you write in KOReader alongside your highlights -- not just the passages you selected, but what you wrote about them.
 
 ## Install
 
@@ -62,6 +62,37 @@ Output lands next to your input as `Highlights_<title>.md`.
 
 If your input has KOReader's date prefix (e.g. `2026-02-15-15-16-56-Tidy First_.md`), it gets stripped automatically.
 
+### Export notes as a task list (editing workflow)
+
+If you use notes to track edits you plan to apply to the source document, use `--task-list`:
+
+```bash
+kolium highlights.md --task-list
+kolium shadowbahn --task-list
+```
+
+This produces a checkbox-style output that pairs each note with its source highlight:
+
+```markdown
+# Shadowbahn - Steve Erickson
+
+**3 corrections to apply**
+
+- [ ] Correction 1
+    - source: "the unnamed song"
+    - note: "cut"
+- [ ] Correction 2
+    - source: "these mattresses"
+    - note: "the mattresses here"
+- [ ] Correction 3
+    - source: "me made"
+    - note: "you made"
+```
+
+Each note becomes a task item with the highlighted passage as its source and your note as the instruction. Useful for scanning through a book and collecting edits to apply later.
+
+Available with any input mode: file path, search, or browse.
+
 ### Custom output path
 
 Use `-o` with either mode:
@@ -76,9 +107,11 @@ kolium highlights.md -o my-notes.md
 1. Strips non-breaking spaces and other KOReader quirks
 2. Extracts person names via spaCy NER
 3. Separates single-word highlights (vocabulary) from multi-word notes
-4. Looks up WordNet definitions for vocabulary words
-5. Cleans up punctuation, capitalisation, and dodgy quoting
-6. Assembles a Markdown doc with a table of contents
+4. Extracts your own annotations (notes written in KOReader after a highlight)
+5. Looks up WordNet definitions for vocabulary words
+6. Cleans up punctuation, capitalisation, and dodgy quoting
+7. Assembles a Markdown doc with a table of contents
+8. Optionally produces a task list pairing each note with its source highlight (`--task-list`)
 
 ## Tests
 

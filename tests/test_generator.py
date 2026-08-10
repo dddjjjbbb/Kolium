@@ -145,3 +145,56 @@ class TestGenerateDocument:
         without_section = "\n".join(lines[without_defs_idx:])
         assert "- Connascence" in without_section
         assert "- Definition:" not in without_section
+
+
+class TestAnnotations:
+    """Tests that user-written annotations (notes after ---) appear in output."""
+
+    def test_annotation_in_note_after_highlight(self, nlp):
+        text = "# Book\n##### Author\n\n*A highlighted passage*\n---\nMy note."
+        result = generate_document(text, nlp=nlp)
+        assert "## Annotations" in result
+        assert "- My note." in result
+
+    def test_annotation_in_note_before_highlight(self, nlp):
+        text = "# Book\n##### Author\n\n---\ncut\n### Page 74 @ ...\n*foo bar baz,*"
+        result = generate_document(text, nlp=nlp)
+        assert "## Annotations" in result
+        assert "- cut" in result
+
+    def test_annotations_in_toc_when_other_categories_present(self, nlp):
+        text = (
+            "# Book\n##### Author\n\n"
+            "*highlighted text*\n---\nMy note about this.\n"
+            "*vocabulary*"
+        )
+        result = generate_document(text, nlp=nlp)
+        assert "## Table of Contents" in result
+        assert "- [Annotations](#annotations)" in result
+
+    def test_no_annotations_section_when_no_notes(self, nlp):
+        text = "# Book\n##### Author\n\n*just a highlight*"
+        result = generate_document(text, nlp=nlp)
+        assert "## Annotations" not in result
+
+    def test_annotations_preserve_user_text(self, nlp):
+        text = "# Book\n##### Author\n\n*highlight*\n---\nUser wrote THIS."
+        result = generate_document(text, nlp=nlp)
+        assert "User wrote THIS." in result
+
+    def test_multiple_annotations(self, nlp):
+        text = (
+            "# Book\n##### Author\n\n"
+            "*highlight A*\n---\nFirst note\n"
+            "*highlight B*\n---\nSecond note"
+        )
+        result = generate_document(text, nlp=nlp)
+        assert "First note" in result
+        assert "Second note" in result
+
+    def test_annotations_not_processed_through_highlight_pipeline(self, nlp):
+        """Annotations are user-written text, not highlights, so they should
+        not be run through the processor (capitalise first, add period, etc.)."""
+        text = "# Book\n##### Author\n\n*highlight*\n---\nuser wrote this"
+        result = generate_document(text, nlp=nlp)
+        assert "user wrote this" in result

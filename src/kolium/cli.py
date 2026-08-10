@@ -17,7 +17,7 @@ from kolium.finder import (
     find_highlights,
     list_all_books,
 )
-from kolium.generator import generate_document
+from kolium.generator import generate_document, generate_task_list
 from kolium.parser import read_md_file, remove_nbsp
 
 
@@ -76,6 +76,12 @@ def build_parser() -> argparse.ArgumentParser:
         type=Path,
         default=KOBO_LIBRARY_DIR,
         help=argparse.SUPPRESS,
+    )
+    parser.add_argument(
+        "-t",
+        "--task-list",
+        action="store_true",
+        help="Output notes as a task list (checkbox format) for tracking corrections",
     )
     return parser
 
@@ -145,7 +151,7 @@ def _select_book(
     return _select_book_plain(books, title)
 
 
-def _process_file(input_path: Path, output_path: Path | None) -> int:
+def _process_file(input_path: Path, output_path: Path | None, task_list: bool = False) -> int:
     """Read, process, and write highlights from a file."""
     try:
         text = read_md_file(input_path)
@@ -154,7 +160,8 @@ def _process_file(input_path: Path, output_path: Path | None) -> int:
         return 1
 
     text = remove_nbsp(text)
-    output = generate_document(text)
+
+    output = generate_task_list(text) if task_list else generate_document(text)
 
     resolved_output = output_path or derive_output_name(input_path)
     resolved_output.write_text(output, encoding="utf-8")
@@ -199,13 +206,13 @@ def main(argv: list[str] | None = None) -> int:
         if selected is None:
             return 1
         output_path = args.output or derive_search_output_name(selected.title)
-        return _process_file(selected.path, output_path)
+        return _process_file(selected.path, output_path, task_list=args.task_list)
 
     raw_input = " ".join(args.input)
     input_path = Path(raw_input)
 
     if input_path.is_file():
-        return _process_file(input_path, args.output)
+        return _process_file(input_path, args.output, task_list=args.task_list)
 
     query = raw_input
 
@@ -245,7 +252,7 @@ def main(argv: list[str] | None = None) -> int:
             return 1
 
     output_path = args.output or derive_search_output_name(selected.title)
-    return _process_file(selected.path, output_path)
+    return _process_file(selected.path, output_path, task_list=args.task_list)
 
 
 if __name__ == "__main__":

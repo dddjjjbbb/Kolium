@@ -5,15 +5,32 @@ from __future__ import annotations
 import spacy
 
 from kolium.dictionary import define
-from kolium.parser import extract_header, extract_notes, extract_people, extract_words
+from kolium.parser import (
+    extract_annotations,
+    extract_header,
+    extract_notes,
+    extract_people,
+    extract_words,
+)
 
 
-def generate_document(text: str, nlp: spacy.language.Language | None = None) -> str:
+def generate_document(
+    text: str,
+    nlp: spacy.language.Language | None = None,
+    extra_categories: list[tuple[str, list[str]]] | None = None,
+) -> str:
     """Build a Markdown document from extracted highlights.
 
     Only populated categories appear. A table of contents is included
     when two or more categories have content. Words include definitions
     from WordNet when available.
+
+    Args:
+        text: Raw highlight text (KOReader markdown format).
+        nlp: A loaded spaCy language model. Loads default if None.
+        extra_categories: Optional list of ``(section_name, items)`` tuples
+            to append as additional categories. Use for data not derived
+            from the raw highlight text (e.g., Kindle user notes).
     """
     if nlp is None:
         nlp = spacy.load("en_core_web_sm")
@@ -21,6 +38,7 @@ def generate_document(text: str, nlp: spacy.language.Language | None = None) -> 
     title, author = extract_header(text)
     people = extract_people(text, nlp)
     notes = extract_notes(text)
+    annotations = extract_annotations(text)
     words = extract_words(text, nlp)
 
     # Remove notes that are just person names (ignoring punctuation)
@@ -38,6 +56,10 @@ def generate_document(text: str, nlp: spacy.language.Language | None = None) -> 
         ("Words with Definitions", words_with_defs),
         ("Words", words_without_defs),
     ]
+    if annotations:
+        categories.append(("Annotations", annotations))
+    if extra_categories:
+        categories.extend(extra_categories)
     populated = [(name, items) for name, items in categories if items]
 
     if not populated:
@@ -126,6 +148,57 @@ def _split_words_by_definition(words: list[str]) -> tuple[list[str], list[str]]:
 def _slugify(text: str) -> str:
     """Convert text to lowercase kebab-case for markdown anchors."""
     return text.lower().replace(" ", "-")
+
+
+def generate_task_list(text: str, nlp: spacy.language.Language | None = None) -> str:
+    """Generate a task-list style Markdown document from notes paired with highlights.
+
+    Each note becomes a checklist item with its source text in a structured
+    format suitable for tracking edits and corrections::
+
+        ## Title - Author
+
+        **N corrections to apply**
+
+        - [ ] Correction 1
+            - source: "source text"
+            - note: "correction to apply"
+
+    Args:
+        text: Raw highlight text (KOReader markdown format).
+        nlp: A loaded spaCy language model (unused in this mode, but kept
+            for API consistency with :func:`generate_document`).
+
+    Returns:
+        A complete Markdown task list string, or empty string if no notes.
+    """
+    from kolium.parser import extract_header, pair_notes_with_highlights
+
+    title, author = extract_header(text)
+    pairs = pair_notes_with_highlights(text)
+
+    if not pairs:
+        return ""
+
+    lines: list[str] = []
+
+    if title:
+        if author:
+            lines.append(f"# {title} - {author}")
+        else:
+            lines.append(f"# {title}")
+        lines.append("")
+
+    lines.append(f"**{len(pairs)} {'corrections' if len(pairs) != 1 else 'correction'} to apply**")
+    lines.append("")
+
+    for i, (source, note) in enumerate(pairs, 1):
+        lines.append(f"- [ ] Correction {i}")
+        lines.append(f"    - source: \"{source}\"")
+        lines.append(f"    - note: \"{note}\"")
+        lines.append("")
+
+    return "\n".join(lines) + "\n"
 
 
 def _append_words_with_definitions(lines: list[str], words: list[str]) -> None:
