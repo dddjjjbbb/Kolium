@@ -74,7 +74,7 @@ def find_epubs(query: str, library_dir: Path = KOBO_LIBRARY_DIR) -> list[str]:
             label = f"{title} by {author}" if author else title
             matches.append(label)
 
-    return sorted(matches, key=str.lower)
+    return sorted(matches, key=lambda value: value.lower())
 
 
 def _parse_header(path: Path) -> tuple[str, str]:

@@ -37,7 +37,8 @@ def derive_output_name(input_path: Path) -> Path:
 
 def derive_search_output_name(title: str) -> Path:
     """Build a dated output filename from a book title."""
-    clean_title = re.sub(r"[^\w\s-]", "", title).strip().replace(" ", "-")
+    disallowed_title_characters = re.compile(r"[^\w\s-]")
+    clean_title = re.sub(disallowed_title_characters, "", title).strip().replace(" ", "-")
     today = date.today().isoformat()
     return Path(f"{today}-{clean_title}-Highlights.md")
 
